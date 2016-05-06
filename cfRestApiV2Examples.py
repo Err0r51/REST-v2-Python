@@ -57,8 +57,8 @@ def APITester():
     ##### private endpoints #####
     
     # get account  
-    result = cfPrivate.get_account()
-    print( "get_account:\n", result )
+    result = cfPrivate.get_accounts()
+    print( "get_accounts:\n", result )
     
     # send limit order
     orderType = "lmt"
