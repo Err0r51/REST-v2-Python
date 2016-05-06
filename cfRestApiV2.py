@@ -66,8 +66,15 @@ class cfApiMethods( object ):
     ##### private endpoints #####
 
     # returns key account information
+    # Deprecated because it returns info about the Futures margin account
+    # Use get_accounts instead
     def get_account( self ):
         endpoint = "/api/v2/account"
+        return self.make_request( "GET", endpoint )
+        
+    # returns key account information
+    def get_accounts( self ):
+        endpoint = "/api/v2/accounts"
         return self.make_request( "GET", endpoint )
 
     # places an order
